@@ -22,7 +22,7 @@ def listar_alunos():
             cursor.execute(
                 "SELECT * FROM alunos ORDER BY id"
             )
-            return cursor.fetchall()
+            return []
         except Exception as erro:
             print(f"Erro a listar os alunos {erro}")
         finally:
@@ -30,4 +30,4 @@ def listar_alunos():
             conexao.close()
 
 
-
+            
