@@ -1,4 +1,5 @@
 from conexao import conectar
+import sqlite3
 
 def inserir_aluno(nome_aluno, idade_aluno):
     conexao, cursor = conectar()
@@ -55,8 +56,7 @@ def deletar_aluno(id_aluno):
             )
             conexao.commit()
         except Exception as erro:
-            print(f"Erro ao deletar o aluno {erro}")
+            print(f"Erro ao deletar o aluno: {erro}")
         finally:
             cursor.close()
             conexao.close()
-

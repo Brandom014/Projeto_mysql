@@ -44,7 +44,7 @@ elif menu == "Atualizar idade":
 
 elif menu == "Deletar aluno":
     st.subheader("Deletar aluno")
-    alunos = deletar_aluno()
+    alunos = listar_alunos()
     if alunos:
         id_aluno = st.selectbox("Escolha o id do aluno", [linha[0] for linha in alunos])
         if st.button("Deletar"):
